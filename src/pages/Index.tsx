@@ -3,10 +3,12 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/ui/hero';
 import Section from '@/components/ui/section';
 import CardLuxury from '@/components/ui/card-luxury';
+import AnimatedSection from '@/components/ui/animated-section';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Gem, Star, Award, ArrowRight, Phone, MapPin, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Index = () => {
   const features = [
@@ -57,52 +59,83 @@ const Index = () => {
       {/* Hero Section */}
       <Hero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <Badge className="mb-6 bg-white/20 text-white border-white/30 text-lg px-6 py-2">
-            <Sparkles className="w-5 h-5 mr-2" />
-            Premium Jewelry Since Years
-          </Badge>
-          <h1 className="text-6xl md:text-8xl font-display font-bold text-white mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <Badge className="mb-6 bg-white/20 text-white border-white/30 text-lg px-6 py-2 backdrop-blur-sm">
+              <Sparkles className="w-5 h-5 mr-2" />
+              Premium Jewelry Since Years
+            </Badge>
+          </motion.div>
+          
+          <motion.h1 
+            className="text-6xl md:text-8xl font-display font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Sonika
-            <span className="block text-gradient bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-200 to-orange-300 bg-clip-text text-transparent">
               Jewellers
             </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
+          </motion.h1>
+          
+          <motion.p 
+            className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             Discover exquisite jewelry collections crafted with passion and precision. 
             From timeless classics to contemporary designs, we create pieces that celebrate 
             your most precious moments.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="btn-luxury">
+          </motion.p>
+          
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Button asChild size="lg" variant="luxury">
               <Link to="/collections">Explore Collections</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+            <Button asChild variant="outline" size="lg">
               <Link to="/suvarna-saubhagya">Winner Stories</Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </Hero>
 
       {/* Features Section */}
       <Section size="xl">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16" animation="fadeUp">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
             Why Choose Sonika Jewellers?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Experience the difference that passion, quality, and trust can make
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <CardLuxury key={index} variant="hover" className="text-center">
-              <div className="text-brand-magenta mb-4 flex justify-center">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </CardLuxury>
+            <AnimatedSection 
+              key={index} 
+              animation="fadeUp" 
+              delay={index * 0.2}
+              className="h-full"
+            >
+              <CardLuxury variant="hover" className="text-center h-full">
+                <div className="text-brand-magenta mb-4 flex justify-center">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </CardLuxury>
+            </AnimatedSection>
           ))}
         </div>
       </Section>
@@ -137,14 +170,14 @@ const Index = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button asChild size="lg" className="btn-luxury">
+        <AnimatedSection className="text-center mt-12" animation="scale">
+          <Button asChild size="lg" variant="luxury">
             <Link to="/collections" className="flex items-center gap-2">
               View All Collections
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
-        </div>
+        </AnimatedSection>
       </Section>
 
       {/* Suvarna Saubhagya Highlight */}
@@ -161,10 +194,10 @@ const Index = () => {
             the Tata Harrier, discover the joy our winners have experienced.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="btn-luxury">
+            <Button asChild size="lg" variant="luxury">
               <Link to="/suvarna-saubhagya">View Winner Stories</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="secondary" size="lg">
               <Link to="/collections">Join the Celebration</Link>
             </Button>
           </div>
@@ -193,14 +226,16 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="btn-luxury">
-              <Link to="/contact">Get Directions</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="tel:9428663300">Call Now</a>
-            </Button>
-          </div>
+          <AnimatedSection animation="fadeUp">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="luxury">
+                <Link to="/contact">Get Directions</Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg">
+                <a href="tel:9428663300">Call Now</a>
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
       </Section>
 

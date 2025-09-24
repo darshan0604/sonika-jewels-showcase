@@ -12,7 +12,7 @@ const Hero = ({ children, className, variant = 'gradient', backgroundImage }: He
   const baseClasses = "relative min-h-screen flex items-center justify-center overflow-hidden";
   
   const variantClasses = {
-    gradient: "gradient-hero",
+    gradient: "bg-gradient-to-br from-brand-magenta via-brand-violet to-brand-teal",
     image: "bg-cover bg-center bg-no-repeat",
     minimal: "bg-background"
   };

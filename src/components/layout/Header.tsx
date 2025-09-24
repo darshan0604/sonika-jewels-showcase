@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-white/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-teal/90 backdrop-blur-md border-b border-white/20 shadow-glass">
       <div className="container mx-auto px-4">
         {/* Top contact bar - hidden on mobile */}
         <div className="hidden md:flex items-center justify-between py-2 text-sm border-b border-white/10">
@@ -78,7 +78,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10">
+            <Button asChild variant="luxury" size="lg">
               <Link to="/contact">Get Quote</Link>
             </Button>
           </div>
@@ -111,7 +111,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-white/20">
-                <Button asChild variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                <Button asChild variant="luxury" size="lg" className="w-full">
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Get Quote</Link>
                 </Button>
               </div>
