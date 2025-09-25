@@ -15,12 +15,12 @@ const Footer = () => {
                 <span className="text-2xl font-bold text-white">S</span>
               </div>
               <div>
-                <h3 className="text-2xl font-display font-bold">Sonika Jewellers</h3>
+                <h3 className="text-2xl font-display font-bold">Darshan Jewellers</h3>
                 <p className="text-white/80">Premium Collections</p>
               </div>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
-              Discover the finest collection of gold, diamond, and silver jewelry crafted with 
+              Discover the finest collection of gold, diamond, and silver jewelry crafted with
               precision and passion. Your trusted partner for life's precious moments.
             </p>
             <div className="space-y-3">
@@ -95,7 +95,7 @@ const Footer = () => {
               Proud Winners of Suvarna Saubhagya Utsav
             </h4>
             <p className="text-white/70 max-w-2xl mx-auto">
-              Celebrating our customers' success stories and the joy we've brought to their special moments. 
+              Celebrating our customers' success stories and the joy we've brought to their special moments.
               <Link to="/suvarna-saubhagya" className="text-brand-pink hover:text-brand-magenta transition-colors ml-1">
                 View success stories →
               </Link>
