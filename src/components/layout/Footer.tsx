@@ -15,7 +15,7 @@ const Footer = () => {
                 <span className="text-2xl font-bold text-white">S</span>
               </div>
               <div>
-                <h3 className="text-2xl font-display font-bold">Darshan Jewellers</h3>
+                <h3 className="text-2xl font-display font-bold">Sonika Jewellers</h3>
                 <p className="text-white/80">Premium Collections</p>
               </div>
             </div>
