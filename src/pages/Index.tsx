@@ -4,9 +4,11 @@ import Hero from '@/components/ui/hero';
 import Section from '@/components/ui/section';
 import CardLuxury from '@/components/ui/card-luxury';
 import AnimatedSection from '@/components/ui/animated-section';
+import GoogleReviewsSlider from '@/components/ui/google-reviews-slider';
+import ImageCarousel from '@/components/ui/image-carousel';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Gem, Star, Award, ArrowRight, Phone, MapPin, Sparkles } from 'lucide-react';
+import { Gem, Star, Award, ArrowRight, Phone, MapPin, Sparkles, Users, Shield, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -14,41 +16,76 @@ const Index = () => {
   const features = [
     {
       icon: <Gem className="w-8 h-8" />,
-      title: "Premium Quality",
+      title: "Premium quality",
       description: "Finest materials and expert craftsmanship in every piece we create"
     },
     {
       icon: <Star className="w-8 h-8" />,
-      title: "Trusted Since Years",
+      title: "Trusted since 1988",
       description: "Serving Visnagar with integrity and building lasting relationships"
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Award-Winning Service",
+      title: "Award-winning service",
       description: "Recognized for excellence in customer satisfaction and quality"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Trusted by 15000+ customers",
+      description: "Generations of families trust us for their precious jewellery needs"
     }
   ];
 
   const collections = [
     {
-      name: "Bridal Collections",
-      description: "Exquisite wedding jewelry sets for your special day",
-      highlight: "Starting ₹2,50,000"
+      name: "Bridal collection",
+      description: "Exquisite wedding jewellery sets for your special day",
+      highlight: "Starting ₹2,50,000",
+      images: [
+        { src: '', alt: 'Bridal set 1' },
+        { src: '', alt: 'Bridal set 2' },
+        { src: '', alt: 'Bridal set 3' }
+      ]
     },
     {
-      name: "Diamond Jewelry",
-      description: "Brilliant diamonds in contemporary and classic settings",
-      highlight: "Certified & Authentic"
-    },
-    {
-      name: "Traditional Sets",
+      name: "Traditional collection",
       description: "Timeless designs inspired by Indian heritage",
-      highlight: "Handcrafted Beauty"
+      highlight: "Handcrafted beauty",
+      images: [
+        { src: '', alt: 'Traditional 1' },
+        { src: '', alt: 'Traditional 2' }
+      ]
     },
     {
-      name: "Custom Designs",
-      description: "Personalized jewelry crafted to your vision",
-      highlight: "Made Just for You"
+      name: "Heritage jewellery",
+      description: "Classic designs passed down through generations",
+      highlight: "Timeless elegance",
+      images: [
+        { src: '', alt: 'Heritage 1' },
+        { src: '', alt: 'Heritage 2' }
+      ]
+    },
+    {
+      name: "Diamond jewellery",
+      description: "Brilliant diamonds in contemporary and classic settings",
+      highlight: "Certified & Authentic",
+      images: [
+        { src: '', alt: 'Diamond 1' },
+        { src: '', alt: 'Diamond 2' }
+      ]
+    }
+  ];
+
+  const certifications = [
+    {
+      icon: <Shield className="w-12 h-12" />,
+      title: "100% stone weight jewellery",
+      description: "Complete transparency in stone weight with certified documentation"
+    },
+    {
+      icon: <CheckCircle className="w-12 h-12" />,
+      title: "HUID BIS certified jewellery",
+      description: "All our gold jewellery comes with BIS hallmark and HUID number for authenticity"
     }
   ];
 
@@ -66,7 +103,7 @@ const Index = () => {
           >
             <Badge className="mb-6 bg-white/20 text-white border-white/30 text-lg px-6 py-2 backdrop-blur-sm">
               <Sparkles className="w-5 h-5 mr-2" />
-              Premium Jewelry Since Years
+              Premium jewellery store since 1988
             </Badge>
           </motion.div>
           
@@ -88,7 +125,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Discover exquisite jewelry collections crafted with passion and precision. 
+            Discover exquisite jewellery collections crafted with passion and precision. 
             From timeless classics to contemporary designs, we create pieces that celebrate 
             your most precious moments.
           </motion.p>
@@ -100,10 +137,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Button asChild size="lg" variant="luxury">
-              <Link to="/collections">Explore Collections</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/suvarna-saubhagya">Winner Stories</Link>
+              <Link to="/collections">Explore collections</Link>
             </Button>
           </motion.div>
         </div>
@@ -113,14 +147,14 @@ const Index = () => {
       <Section size="xl">
         <AnimatedSection className="text-center mb-16" animation="fadeUp">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Why Choose Sonika Jewellers?
+            Why choose Sonika Jewellers
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Experience the difference that passion, quality, and trust can make
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {features.map((feature, index) => (
             <AnimatedSection 
               key={index} 
@@ -138,13 +172,37 @@ const Index = () => {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Google Reviews */}
+        <AnimatedSection animation="fadeUp" delay={0.4}>
+          <div className="max-w-xl mx-auto">
+            <GoogleReviewsSlider />
+          </div>
+        </AnimatedSection>
+      </Section>
+
+      {/* Certifications Section */}
+      <Section variant="accent" size="lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {certifications.map((cert, index) => (
+            <AnimatedSection key={index} animation="fadeUp" delay={index * 0.2}>
+              <CardLuxury variant="gradient" className="text-center h-full" padding="xl">
+                <div className="text-brand-magenta mb-4 flex justify-center">
+                  {cert.icon}
+                </div>
+                <h3 className="text-2xl font-display font-bold mb-3">{cert.title}</h3>
+                <p className="text-muted-foreground">{cert.description}</p>
+              </CardLuxury>
+            </AnimatedSection>
+          ))}
+        </div>
       </Section>
 
       {/* Collections Preview */}
-      <Section variant="accent" size="xl">
+      <Section size="xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Our Signature Collections
+            Our signature collections
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Each collection tells a story, crafted to perfection for life's special moments
@@ -154,17 +212,12 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {collections.map((collection, index) => (
             <CardLuxury key={index} variant="hover" className="text-center group">
-              <div className="aspect-square bg-gradient-brand rounded-xl mb-6 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <Gem className="w-12 h-12 mx-auto mb-2" />
-                  <p className="text-sm opacity-80">Collection Preview</p>
-                </div>
-              </div>
+              <ImageCarousel images={collection.images} className="mb-6" />
               <h3 className="text-lg font-semibold mb-2">{collection.name}</h3>
               <p className="text-muted-foreground text-sm mb-3">{collection.description}</p>
               <Badge variant="outline" className="mb-4">{collection.highlight}</Badge>
               <Button asChild variant="outline" size="sm" className="w-full group-hover:bg-brand-magenta group-hover:text-white transition-colors">
-                <Link to="/collections">View Collection</Link>
+                <Link to="/collections">View collection</Link>
               </Button>
             </CardLuxury>
           ))}
@@ -173,42 +226,37 @@ const Index = () => {
         <AnimatedSection className="text-center mt-12" animation="scale">
           <Button asChild size="lg" variant="luxury">
             <Link to="/collections" className="flex items-center gap-2">
-              View All Collections
+              View all collections
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
         </AnimatedSection>
       </Section>
 
-      {/* Suvarna Saubhagya Highlight */}
-      <Section size="xl">
+      {/* Special Offer Highlight */}
+      <Section variant="accent" size="xl">
         <CardLuxury variant="gradient" className="max-w-4xl mx-auto text-center" padding="xl">
           <Badge className="mb-6 bg-yellow-500 text-black text-lg px-6 py-2">
-            ✨ Special Program
+            ✨ Special offer
           </Badge>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Suvarna Saubhagya Utsav Winners
+            Suvarna Saubhagya Utsav winners
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Celebrating our customers' success! From beautiful jewelry to life-changing prizes like 
+            Celebrating our customers' success! From beautiful jewellery to life-changing prizes like 
             the Tata Harrier, discover the joy our winners have experienced.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="luxury">
-              <Link to="/suvarna-saubhagya">View Winner Stories</Link>
-            </Button>
-            <Button asChild variant="secondary" size="lg">
-              <Link to="/collections">Join the Celebration</Link>
-            </Button>
-          </div>
+          <Button asChild size="lg" variant="luxury">
+            <Link to="/offers">View winner stories</Link>
+          </Button>
         </CardLuxury>
       </Section>
 
       {/* Contact CTA */}
-      <Section variant="accent" size="lg">
+      <Section size="lg">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Visit Our Showroom
+            Visit our showroom
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
             <div className="flex items-center gap-3 text-muted-foreground">
@@ -228,11 +276,15 @@ const Index = () => {
           </div>
           <AnimatedSection animation="fadeUp">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="luxury">
-                <Link to="/contact">Get Directions</Link>
+              <Button asChild size="lg" className="btn-luxury">
+                <a href="https://wa.me/919428663300" target="_blank" rel="noopener noreferrer">
+                  WhatsApp now
+                </a>
               </Button>
-              <Button asChild variant="secondary" size="lg">
-                <a href="tel:9428663300">Call Now</a>
+              <Button asChild variant="outline" size="lg">
+                <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer">
+                  Instagram profile
+                </a>
               </Button>
             </div>
           </AnimatedSection>

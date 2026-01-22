@@ -4,38 +4,37 @@ import Hero from '@/components/ui/hero';
 import Section from '@/components/ui/section';
 import CardLuxury from '@/components/ui/card-luxury';
 import { Button } from '@/components/ui/button';
-import { Award, Users, Gem, Heart, Star, Clock } from 'lucide-react';
+import { Award, Users, Gem, Heart, Star, Clock, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
   const values = [
     {
       icon: <Gem className="w-8 h-8" />,
-      title: "Premium Quality",
-      description: "We source only the finest materials and employ skilled craftsmen to create jewelry that lasts generations."
+      title: "Premium quality",
+      description: "We source only the finest materials and employ skilled craftsmen to create jewellery that lasts generations."
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Personal Touch",
+      title: "Personal touch",
       description: "Every piece is crafted with love and attention to detail, making your special moments even more memorable."
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Trusted Legacy",
+      title: "Trusted legacy",
       description: "Years of serving the Visnagar community with integrity, quality, and exceptional customer service."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Customer First",
+      title: "Customer first",
       description: "Your satisfaction is our priority. We work closely with you to bring your vision to life."
     }
   ];
 
   const stats = [
-    { number: "15+", label: "Years of Excellence", icon: <Clock className="w-6 h-6" /> },
-    { number: "5000+", label: "Happy Customers", icon: <Users className="w-6 h-6" /> },
-    { number: "50+", label: "Design Collections", icon: <Gem className="w-6 h-6" /> },
-    { number: "100%", label: "Satisfaction Rate", icon: <Star className="w-6 h-6" /> },
+    { number: "37", label: "Years of excellence", icon: <Clock className="w-6 h-6" /> },
+    { number: "15000+", label: "Happy customers", icon: <Users className="w-6 h-6" /> },
+    { number: "5", label: "Star Google rating", icon: <Star className="w-6 h-6" /> },
   ];
 
   return (
@@ -46,14 +45,14 @@ const About = () => {
       <Hero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">
-            Our Story
+            Our story
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
             A legacy of craftsmanship, trust, and creating precious memories 
             for families across Gujarat
           </p>
           <Button asChild size="lg" className="btn-luxury">
-            <Link to="/collections">Explore Collections</Link>
+            <Link to="/collections">Explore collections</Link>
           </Button>
         </div>
       </Hero>
@@ -63,32 +62,32 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-              Crafting Dreams Since Years
+              Crafting dreams since 1988
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                Sonika Jewellers began as a dream to bring the finest jewelry to the heart of Visnagar. 
+                Sonika Jewellers began as a dream to bring the finest jewellery to the heart of Visnagar. 
                 Located at Maya Bazar, Golwad Corner, we've been serving our community with dedication 
-                and passion for over a decade.
+                and passion for over three decades.
               </p>
               <p>
-                Our journey started with a simple belief: every piece of jewelry should tell a story, 
+                Our journey started with a simple belief: every piece of jewellery should tell a story, 
                 celebrate a moment, and become a treasured heirloom. From traditional wedding sets to 
                 contemporary designs, we've been part of countless precious moments.
               </p>
               <p>
                 What sets us apart is our commitment to quality, personalized service, and understanding 
-                that jewelry is more than just an accessory—it's an expression of love, celebration, 
+                that jewellery is more than just an accessory—it's an expression of love, celebration, 
                 and milestone moments in life.
               </p>
             </div>
           </div>
           <div className="relative">
             <CardLuxury variant="glass" className="overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-brand rounded-xl flex items-center justify-center">
+              <div className="aspect-[4/3] bg-gradient-brand rounded-xl flex items-center justify-center border-4 border-brand-magenta">
                 <div className="text-center text-white">
                   <Gem className="w-24 h-24 mx-auto mb-4" />
-                  <p className="text-lg font-medium">Store Image Placeholder</p>
+                  <p className="text-lg font-medium">Store image</p>
                   <p className="text-sm opacity-80">Beautiful storefront & interior</p>
                 </div>
               </div>
@@ -101,7 +100,7 @@ const About = () => {
       <Section variant="accent" size="xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Our Values
+            Our values
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The principles that guide everything we do
@@ -125,14 +124,14 @@ const About = () => {
       <Section size="xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-            Our Achievement
+            Our achievement
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Numbers that reflect our commitment to excellence
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <CardLuxury key={index} variant="gradient" className="text-center">
               <div className="text-brand-magenta mb-4 flex justify-center">
@@ -151,17 +150,39 @@ const About = () => {
       <Section variant="accent" size="lg">
         <div className="text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Ready to Create Your Story?
+            Ready to create your story?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Visit our showroom and discover the perfect piece for your special moment
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" className="btn-luxury">
-              <Link to="/collections">View Collections</Link>
+              <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer">
+                Instagram
+              </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/contact">Visit Our Store</Link>
+              <a href="https://maps.google.com/?q=Sonika+Jewellers+Visnagar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                Location
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/contact" className="flex items-center gap-2">
+                Visit our store
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="https://wa.me/919428663300" className="flex items-center gap-2">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="tel:9428663300" className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Call now
+              </a>
             </Button>
           </div>
         </div>

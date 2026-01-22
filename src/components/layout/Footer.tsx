@@ -20,8 +20,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
-              Discover the finest collection of gold, diamond, and silver jewelry crafted with
-              precision and passion. Your trusted partner for life's precious moments.
+              Discover the finest collection of gold, diamond, and silver jewellery crafted with
+              precision and passion. Your trusted partner for life's precious moments since 1988.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-white/80">
@@ -92,11 +92,11 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="text-center mb-8">
             <h4 className="text-xl font-display font-semibold mb-3 text-gradient">
-              Proud Winners of Suvarna Saubhagya Utsav
+              Proud winners of Suvarna Saubhagya Utsav
             </h4>
             <p className="text-white/70 max-w-2xl mx-auto">
               Celebrating our customers' success stories and the joy we've brought to their special moments.
-              <Link to="/suvarna-saubhagya" className="text-brand-pink hover:text-brand-magenta transition-colors ml-1">
+              <Link to="/offers" className="text-brand-pink hover:text-brand-magenta transition-colors ml-1">
                 View success stories →
               </Link>
             </p>

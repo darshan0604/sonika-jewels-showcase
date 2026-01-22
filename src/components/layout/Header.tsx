@@ -12,7 +12,7 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Collections', href: '/collections' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Suvarna Saubhagya', href: '/suvarna-saubhagya' },
+    { name: 'Offers', href: '/offers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -47,12 +47,12 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-xl gradient-brand flex items-center justify-center shadow-luxury">
-              <span className="text-2xl font-bold text-white">S</span>
+            <div className="w-12 h-12 rounded-xl gradient-brand flex items-center justify-center shadow-luxury overflow-hidden">
+              <span className="text-2xl font-bold text-white font-display">S</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="text-2xl font-display font-bold text-white">Sonika Jewellers</h1>
-              <p className="text-sm text-white/80">Premium Collections</p>
+              <p className="text-sm text-white/80">Premium jewellery since 1988</p>
             </div>
           </Link>
 
