@@ -60,27 +60,27 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: "Visit Our Store",
+      title: "Visit our store",
       details: ["Maya Bazar, Golwad Corner", "Visnagar, Gujarat 384315"],
-      action: "Get Directions"
+      action: "Get directions"
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
+      title: "Call us",
       details: ["9428663300", "9016610800"],
-      action: "Call Now"
+      action: "Call now"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Store Hours",
+      title: "Store hours",
       details: ["Mon - Sat: 10:00 AM - 8:00 PM", "Sunday: Closed"],
-      action: "Plan Visit"
+      action: "Plan visit"
     },
     {
       icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
+      title: "Email us",
       details: ["info@sonikajewellers.com", "sales@sonikajewellers.com"],
-      action: "Send Email"
+      action: "Send email"
     }
   ];
 
@@ -92,17 +92,17 @@ const Contact = () => {
       <Hero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">
-            Contact Us
+            Contact us
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">
-            Ready to find your perfect piece? Visit our showroom or get in touch with our jewelry experts
+            Ready to find your perfect piece? Visit our showroom or get in touch with our jewellery experts
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-luxury">
-              <a href="tel:9428663300">Call Now</a>
+              <a href="tel:9428663300">Call now</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-              <a href="#contact-form">Send Message</a>
+              <a href="#contact-form">Send message</a>
             </Button>
           </div>
         </div>
@@ -112,10 +112,10 @@ const Contact = () => {
       <Section size="lg">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-            Get in Touch
+            Get in touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We're here to help you find the perfect jewelry for your special moments
+            We're here to help you find the perfect jewellery for your special moments
           </p>
         </div>
 
@@ -147,7 +147,7 @@ const Contact = () => {
             <div className="aspect-[4/3] bg-gradient-brand rounded-xl flex items-center justify-center">
               <div className="text-center text-white">
                 <MapPin className="w-16 h-16 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Store Location</h3>
+                <h3 className="text-xl font-bold mb-2">Store location</h3>
                 <p className="text-white/90">Interactive map will be embedded here</p>
                 <p className="text-sm text-white/80 mt-2">Maya Bazar, Golwad Corner, Visnagar</p>
               </div>
@@ -157,7 +157,7 @@ const Contact = () => {
           {/* Contact Form */}
           <CardLuxury variant="default" id="contact-form">
             <div className="mb-6">
-              <h3 className="text-2xl font-display font-bold mb-2">Send us a Message</h3>
+              <h3 className="text-2xl font-display font-bold mb-2">Send us a message</h3>
               <p className="text-muted-foreground">
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
@@ -228,7 +228,7 @@ const Contact = () => {
 
               <Button type="submit" className="w-full btn-luxury">
                 <Send className="w-4 h-4 mr-2" />
-                Send Message
+                Send message
               </Button>
             </form>
           </CardLuxury>
@@ -239,9 +239,25 @@ const Contact = () => {
       <Section size="lg">
         <div className="text-center">
           <h2 className="text-3xl font-display font-bold mb-8">
-            Prefer Direct Contact?
+            Connect with us
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button asChild size="lg" className="btn-luxury">
+              <a href="https://wa.me/919428663300" className="flex items-center gap-2">
+                <MessageCircle className="w-5 h-5" />
+                WhatsApp
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Instagram
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="https://facebook.com/sonikajewellers" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Facebook
+              </a>
+            </Button>
             <Button asChild size="lg" variant="outline">
               <a href="tel:9428663300" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -252,12 +268,6 @@ const Contact = () => {
               <a href="tel:9016610800" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call: 9016610800
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="https://wa.me/919428663300" className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp
               </a>
             </Button>
           </div>
