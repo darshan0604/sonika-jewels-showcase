@@ -99,7 +99,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-luxury">
-              <a href="tel:9428663300">Call now</a>
+              <a href="tel:9016610800">Call now</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
               <a href="#contact-form">Send message</a>
@@ -242,32 +242,26 @@ const Contact = () => {
             Connect with us
           </h2>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="btn-luxury">
-              <a href="https://wa.me/919428663300" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+              <a href="https://wa.me/919016610800" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:opacity-90">
+              <a href="https://www.instagram.com/sonikajewellers_?igsh=NDRqNmFncGcxaWIy" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Instagram
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="https://facebook.com/sonikajewellers" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <a href="https://www.facebook.com/share/1CNb9NmbaP/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 Facebook
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="tel:9428663300" className="flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                Call: 9428663300
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" className="bg-brand-magenta hover:bg-brand-purple text-white">
               <a href="tel:9016610800" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call: 9016610800
+                Call now
               </a>
             </Button>
           </div>

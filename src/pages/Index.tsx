@@ -276,13 +276,13 @@ const Index = () => {
           </div>
           <AnimatedSection animation="fadeUp">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-luxury">
-                <a href="https://wa.me/919428663300" target="_blank" rel="noopener noreferrer">
+              <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+                <a href="https://wa.me/919016610800" target="_blank" rel="noopener noreferrer">
                   WhatsApp now
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer">
+              <Button asChild size="lg" className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:opacity-90">
+                <a href="https://www.instagram.com/sonikajewellers_?igsh=NDRqNmFncGcxaWIy" target="_blank" rel="noopener noreferrer">
                   Instagram profile
                 </a>
               </Button>
