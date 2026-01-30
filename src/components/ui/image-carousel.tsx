@@ -27,7 +27,7 @@ const ImageCarousel = ({ images, className = '' }: ImageCarouselProps) => {
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-xl ${className}`}>
+    <div className={`relative overflow-hidden rounded-xl bg-gradient-brand p-2 ${className}`}>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -35,13 +35,13 @@ const ImageCarousel = ({ images, className = '' }: ImageCarouselProps) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="aspect-square bg-gradient-brand flex items-center justify-center"
+          className="aspect-square bg-gradient-brand rounded-lg border-2 border-brand-magenta flex items-center justify-center"
         >
           {images[currentIndex]?.src ? (
             <img 
               src={images[currentIndex].src} 
               alt={images[currentIndex].alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg"
             />
           ) : (
             <div className="text-center text-white">

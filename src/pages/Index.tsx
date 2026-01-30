@@ -216,7 +216,7 @@ const Index = () => {
               <h3 className="text-lg font-semibold mb-2">{collection.name}</h3>
               <p className="text-muted-foreground text-sm mb-3">{collection.description}</p>
               <Badge variant="outline" className="mb-4">{collection.highlight}</Badge>
-              <Button asChild variant="outline" size="sm" className="w-full group-hover:bg-brand-magenta group-hover:text-white transition-colors">
+              <Button asChild variant="outline" size="sm" className="w-full bg-brand-magenta text-white hover:bg-brand-purple transition-colors">
                 <Link to="/collections">View collection</Link>
               </Button>
             </CardLuxury>
