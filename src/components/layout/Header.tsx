@@ -32,13 +32,13 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
+            <a href="tel:9016610800" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors font-medium">
+              <Phone className="w-4 h-4" />
+              <span>9016610800</span>
+            </a>
             <a href="tel:9428663300" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors">
               <Phone className="w-4 h-4" />
               <span>9428663300</span>
-            </a>
-            <a href="tel:9016610800" className="flex items-center gap-2 text-white/90 hover:text-white transition-colors">
-              <Phone className="w-4 h-4" />
-              <span>9016610800</span>
             </a>
           </div>
         </div>

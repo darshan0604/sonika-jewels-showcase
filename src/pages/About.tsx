@@ -156,30 +156,30 @@ const About = () => {
             Visit our showroom and discover the perfect piece for your special moment
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="btn-luxury">
-              <a href="https://instagram.com/sonikajewellers" target="_blank" rel="noopener noreferrer">
+            <Button asChild size="lg" className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white hover:opacity-90">
+              <a href="https://www.instagram.com/sonikajewellers_?igsh=NDRqNmFncGcxaWIy" target="_blank" rel="noopener noreferrer">
                 Instagram
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="https://maps.google.com/?q=Sonika+Jewellers+Visnagar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
+              <a href="https://maps.app.goo.gl/5hKXpc6EGeGciZos7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 Location
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild size="lg" className="bg-brand-magenta hover:bg-brand-purple text-white">
               <Link to="/contact" className="flex items-center gap-2">
                 Visit our store
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="https://wa.me/919428663300" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+              <a href="https://wa.me/919016610800" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <a href="tel:9428663300" className="flex items-center gap-2">
+            <Button asChild size="lg" className="bg-brand-teal hover:bg-brand-blue text-white">
+              <a href="tel:9016610800" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call now
               </a>

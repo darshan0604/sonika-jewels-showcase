@@ -31,8 +31,8 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-white/80">
                 <Phone className="w-5 h-5 text-brand-magenta" />
                 <div className="flex gap-4">
+                  <a href="tel:9016610800" className="hover:text-white transition-colors font-medium">9016610800</a>
                   <a href="tel:9428663300" className="hover:text-white transition-colors">9428663300</a>
-                  <a href="tel:9016610800" className="hover:text-white transition-colors">9016610800</a>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-white/80">
@@ -66,15 +66,20 @@ const Footer = () => {
 
           {/* Collections */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Our Collections</h4>
-            <nav className="space-y-3">
+            <h4 className="text-lg font-semibold mb-6">Our collections</h4>
+            <nav className="space-y-2 text-sm">
               {[
-                'Bridal Sets',
-                'Diamond Rings',
-                'Gold Necklaces',
-                'Silver Jewelry',
-                'Custom Designs',
-                'Traditional Sets',
+                'Bridal jewellery',
+                'Kalkatti jewellery',
+                'Heritage jewellery',
+                'Kundan jewellery',
+                'Jadtar jewellery',
+                'Light weight jewellery',
+                'Traditional jewellery',
+                'Paper casting jewellery',
+                'Rose gold jewellery',
+                'Diamond jewellery',
+                'Silver jewellery',
               ].map((collection) => (
                 <Link
                   key={collection}
