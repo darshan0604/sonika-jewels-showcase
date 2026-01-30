@@ -83,8 +83,8 @@ const About = () => {
             </div>
           </div>
           <div className="relative">
-            <CardLuxury variant="glass" className="overflow-hidden">
-              <div className="aspect-[4/3] bg-gradient-brand rounded-xl flex items-center justify-center border-4 border-brand-magenta">
+            <CardLuxury variant="glass" className="overflow-hidden bg-gradient-brand p-2">
+              <div className="aspect-[4/3] bg-gradient-brand rounded-lg flex items-center justify-center border-2 border-brand-magenta">
                 <div className="text-center text-white">
                   <Gem className="w-24 h-24 mx-auto mb-4" />
                   <p className="text-lg font-medium">Store image</p>
